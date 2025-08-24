@@ -1,0 +1,20 @@
+{
+  "name": "Ansible + Kubernetes + OpenTofu",
+  "image": "mcr.microsoft.com/devcontainers/python:1-${templateOption:imageVariant}",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "opentofu.vscode-opentofu",
+        "redhat.vscode-yaml",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "redhat.ansible"
+      ]
+    }
+  },
+  "postCreateCommand": "flutter pub get",
+  "remoteUser": "root",
+  "features": {},
+  "forwardPorts": [],
+  "mounts": [],
+  "workspaceFolder": "/workspace"
+}
