@@ -1,0 +1,32 @@
+{
+    "id": "ansible",
+    "version": "1.0.0",
+    "name": "Ansible",
+    "description": "Develop applications using Ansible",
+    "documentationURL": "https://github.com/jhoareaumarion/devcontainers/blob/main/src/ansible/README.md",
+    "publisher": "jhoareaumarion",
+    "licenseURL": "https://github.com/jhoareaumarion/devcontainers/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Python version (use -bookworm, or -bullseye variants on local arm64/Apple Silicon):",
+            "proposals": [
+                "3-bookworm",
+                "3.12-bookworm",
+                "3.11-bookworm",
+                "3.10-bookworm",
+                "3.9-bookworm",
+                "3-bullseye",
+                "3.12-bullseye",
+                "3.11-bullseye",
+                "3.10-bullseye",
+                "3.9-bullseye"
+            ],
+            "default": "3.12-bullseye"
+        }
+    },
+    "platforms": ["Python"],
+    "optionalPaths": [
+        ".github/*"
+    ]
+}

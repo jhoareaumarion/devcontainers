@@ -1,5 +1,5 @@
 {
-  "name": "Ansible + Kubernetes + OpenTofu",
+  "name": "Ansible",
   "build":{
     "dockerfile": "Dockerfile",
     "context": "."
@@ -7,9 +7,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "opentofu.vscode-opentofu",
-        "redhat.vscode-yaml",
-        "ms-kubernetes-tools.vscode-kubernetes-tools",
         "redhat.ansible"
       ]
     }
