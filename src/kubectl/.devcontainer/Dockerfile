@@ -7,20 +7,11 @@ LABEL org.opencontainers.image.licenses="MPL 2.0"
 
 WORKDIR /workspace
 
-    # Update packages and install dependencies
-run apt-get update && \
-    apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release && \
-    # Create keyring directory if it doesn't exist
-    install -m 0755 -d /etc/apt/keyrings && \
-    # Download Kubernetes GPG key
-    curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.33/deb/Release.key | gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg && \
-    chmod 644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg && \
-    # Add Kubernetes APT repository
-    echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.33/deb/ /' | tee /etc/apt/sources.list.d/kubernetes.list >/dev/null && \
-    chmod 644 /etc/apt/sources.list.d/kubernetes.list
+# Copy the installation script
+COPY install_kubectl.sh /tmp/install_kubectl.sh
 
-    # Update package lists and install kubectl
-RUN apt-get update && \
-    apt-get install -y kubectl && \
+# Run the script
+RUN /tmp/install_kubectl.sh && \
+    rm /tmp/install_kubectl.sh
 
 CMD ["/bin/bash"]

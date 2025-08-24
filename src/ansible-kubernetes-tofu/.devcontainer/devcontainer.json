@@ -2,7 +2,7 @@
   "name": "Ansible + Kubernetes + OpenTofu",
   "build":{
     "dockerfile": "Dockerfile",
-    "context": "."
+    "context": "../../."
   },
   "containerEnv": {
     "PYTHON_PACKAGES": "",                                              // comma-separated

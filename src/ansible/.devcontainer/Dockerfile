@@ -7,16 +7,12 @@ LABEL org.opencontainers.image.licenses="MPL 2.0"
 
 WORKDIR /workspace
 
-    # Install pipx using the Python user environment
-RUN python3 -m pip install --user pipx && \
-    python3 -m pipx ensurepath && \
-    # Ensure pipx is in the PATH
-    pipx ensurepath && \
-    pipx ensurepath --global || true && \
-    # Install Ansible with dependencies via pipx
-    pipx install --include-deps ansible && \
-    # Install ansible-lint
-    pipx install ansible-lint
+# Copy the installation script
+COPY install_ansible.sh /tmp/install_ansible.sh
+
+# Run the script
+RUN /tmp/install_ansible.sh && \
+    rm /tmp/install_ansible.sh
 
 COPY post-create.sh /usr/local/bin/post-create.sh
 RUN chmod +x /usr/local/bin/post-create.sh
