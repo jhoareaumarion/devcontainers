@@ -7,6 +7,9 @@ LABEL org.opencontainers.image.licenses="MPL 2.0"
 
 WORKDIR /workspace
 
+ARG PYTHON_PACKAGES
+ARG ANSIBLE_COLLECTIONS
+
     # Install pipx using the Python user environment
 RUN python3 -m pip install --user pipx && \
     python3 -m pipx ensurepath && \
@@ -16,8 +19,19 @@ RUN python3 -m pip install --user pipx && \
     # Install Ansible with dependencies via pipx
     pipx install --include-deps ansible && \
     # Install ansible-lint
-    pipx install ansible-lint && \
-    # Inject pexpect into the Ansible environment
-    pipx inject ansible pexpect
+    pipx install ansible-lint
+
+RUN if [ ! -z "$PYTHON_PACKAGES" ]; then \
+    pipx inject ansible $(echo $PYTHON_PACKAGES | tr ',' ' '); \
+fi && \
+    if [ ! -z "$ANSIBLE_COLLECTIONS" ]; then \
+        echo "Installing Ansible collections..."; \
+        echo "Collections: $ANSIBLE_COLLECTIONS"; \
+        echo "collections:" > /tmp/requirements.yml; \
+        for c in $(echo $ANSIBLE_COLLECTIONS | tr ',' ' '); do \
+            echo "  - name: $c" >> /tmp/requirements.yml; \
+        done; \
+        ansible-galaxy collection install -r /tmp/requirements.yml; \
+    fi
 
 CMD ["/bin/bash"]

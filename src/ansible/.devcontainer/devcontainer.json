@@ -2,7 +2,11 @@
   "name": "Ansible",
   "build":{
     "dockerfile": "Dockerfile",
-    "context": "."
+    "context": ".",    
+    "args": {
+      "PYTHON_PACKAGES": "",          // comma-separated
+      "ANSIBLE_COLLECTIONS": ""       // comma-separated
+    }
   },
   "customizations": {
     "vscode": {
