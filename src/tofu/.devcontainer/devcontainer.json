@@ -1,0 +1,21 @@
+{
+  "name": "OpenTofu",
+  "build":{
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "opentofu.vscode-opentofu",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+      ]
+    }
+  },
+  "postCreateCommand": "",
+  "remoteUser": "root",
+  "features": {},
+  "forwardPorts": [],
+  "mounts": [],
+  "workspaceFolder": "/workspace"
+}
