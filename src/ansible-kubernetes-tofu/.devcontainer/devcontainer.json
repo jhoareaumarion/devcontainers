@@ -1,6 +1,9 @@
 {
   "name": "Ansible + Kubernetes + OpenTofu",
-  "image": "mcr.microsoft.com/devcontainers/python:1-${templateOption:imageVariant}",
+  "build":{
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
   "customizations": {
     "vscode": {
       "extensions": [
