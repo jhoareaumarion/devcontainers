@@ -1,8 +1,8 @@
 {
-    "id": "opentofu",
+    "id": "kubectl",
     "version": "1.0.0",
-    "name": "OpenTofu",
-    "description": "Develop applications using OpenTofu",
+    "name": "kubectl",
+    "description": "Develop applications using kubectl",
     "documentationURL": "https://github.com/jhoareaumarion/devcontainers/blob/main/src/OpenTofu/README.md",
     "publisher": "jhoareaumarion",
     "licenseURL": "https://github.com/jhoareaumarion/devcontainers/blob/main/LICENSE",
