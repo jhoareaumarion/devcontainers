@@ -1,0 +1,7 @@
+// More info: https://containers.dev/implementors/json_reference/
+{
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+	"features": {
+	},
+	"postCreateCommand": "npm install -g @devcontainers/cli"
+}

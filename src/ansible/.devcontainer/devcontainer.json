@@ -1,0 +1,27 @@
+{
+  "name": "Ansible",
+  "build":{
+    "dockerfile": "Dockerfile",
+    "context": ".",    
+    "args": {
+    }
+  },
+  "containerEnv": {
+    "PYTHON_PACKAGES": "${templateOption:additionalPythonPackages}",                                              // comma-separated
+    "ANSIBLE_COLLECTIONS": "${templateOption:additionnalAnsibleCollections}"     
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.ansible",
+        "redhat.vscode-yaml"
+      ]
+    }
+  },
+  "postCreateCommand": "/usr/local/bin/post-create.sh | tee /tmp/post-create.log",
+  "remoteUser": "root",
+  "features": {},
+  "forwardPorts": [],
+  "mounts": [],
+  "workspaceFolder": "/workspace"
+}

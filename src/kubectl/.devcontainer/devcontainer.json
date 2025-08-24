@@ -1,0 +1,21 @@
+{
+  "name": "Kubectl",
+  "build":{
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.vscode-yaml",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+      ]
+    }
+  },
+  "postCreateCommand": "",
+  "remoteUser": "root",
+  "features": {},
+  "forwardPorts": [],
+  "mounts": [],
+  "workspaceFolder": "/workspace"
+}
