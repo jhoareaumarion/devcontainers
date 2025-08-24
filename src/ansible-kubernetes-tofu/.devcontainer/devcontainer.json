@@ -4,6 +4,10 @@
     "dockerfile": "Dockerfile",
     "context": "."
   },
+  "containerEnv": {
+    "PYTHON_PACKAGES": "",                                              // comma-separated
+    "ANSIBLE_COLLECTIONS": ""                                           // comma-separated
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -14,7 +18,7 @@
       ]
     }
   },
-  "postCreateCommand": "",
+  "postCreateCommand": "/usr/local/bin/post-create.sh | tee /tmp/post-create.log",
   "remoteUser": "root",
   "features": {},
   "forwardPorts": [],
