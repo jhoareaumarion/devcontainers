@@ -1,5 +1,5 @@
 {
-    "id": "Ansible + Kubernetes + OpenTofu",
+    "id": "ansible-kubernetes-tofu",
     "version": "1.0.0",
     "name": "Python 3",
     "description": "Develop applications using Ansible, Kubernetes and OpenTofu",
