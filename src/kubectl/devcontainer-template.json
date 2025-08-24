@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "name": "kubectl",
     "description": "Develop applications using kubectl",
-    "documentationURL": "https://github.com/jhoareaumarion/devcontainers/blob/main/src/OpenTofu/README.md",
+    "documentationURL": "https://github.com/jhoareaumarion/devcontainers/blob/main/src/kubectl/README.md",
     "publisher": "jhoareaumarion",
     "licenseURL": "https://github.com/jhoareaumarion/devcontainers/blob/main/LICENSE",
     "options": {
