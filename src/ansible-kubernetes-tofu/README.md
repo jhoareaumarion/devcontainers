@@ -8,6 +8,8 @@ Develop applications using Ansible, Kubernetes and OpenTofu
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | imageVariant | Python version (use -bookworm, or -bullseye variants on local arm64/Apple Silicon): | string | 3.12-bullseye |
+| additionalPythonPackages | A comma-separated list of python packages you want to include in the devcontainer | string | - |
+| additionnalAnsibleCollections | A comma-separated list of ansible collections you want to include in the devcontainer | string | - |
 
 
 
