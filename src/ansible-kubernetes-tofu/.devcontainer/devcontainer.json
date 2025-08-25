@@ -23,5 +23,5 @@
   "features": {},
   "forwardPorts": [],
   "mounts": [],
-  "workspaceFolder": "/workspace"
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
 }
