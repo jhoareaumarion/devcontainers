@@ -26,12 +26,12 @@
         },
         "additionalPythonPackages":{
             "type": "string",
-            "description": "A comma-separated list of python packages you want to include in the devcontainer. Example: `request,pytest,flask`",
+            "description": "A comma-separated list of python packages you want to include in the devcontainer. Example: `requests,pytest,flask`",
             "default": ""
         },
         "additionnalAnsibleCollections":{
             "type": "string",
-            "description": "A comma-separated list of ansible collections you want to include in the devcontainer. Example: `community.docker,ansible.posix,kubernetes.core",
+            "description": "A comma-separated list of ansible collections you want to include in the devcontainer. Example: `community.docker,ansible.posix,kubernetes.core`",
             "default": ""
         }
     },
