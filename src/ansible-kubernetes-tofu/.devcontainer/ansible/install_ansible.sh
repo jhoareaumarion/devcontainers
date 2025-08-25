@@ -14,6 +14,3 @@ pipx install --include-deps ansible
 
 # Install ansible-lint via pipx
 pipx install ansible-lint
-
-# Inject pexpect into the ansible pipx environment
-pipx inject ansible pexpect

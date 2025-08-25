@@ -2,7 +2,7 @@
   "name": "Ansible + Kubernetes + OpenTofu",
   "build":{
     "dockerfile": "Dockerfile",
-    "context": "../../."
+    "context": "."
   },  
   "containerEnv": {
     "PYTHON_PACKAGES": "${templateOption:additionalPythonPackages}",                                              // comma-separated
@@ -18,7 +18,7 @@
       ]
     }
   },
-  "postCreateCommand": "/usr/local/bin/post-create.sh | tee /tmp/post-create.log",
+  "postCreateCommand": "/usr/local/bin/post_create.sh | tee /tmp/post_create.log",
   "remoteUser": "root",
   "features": {},
   "forwardPorts": [],
