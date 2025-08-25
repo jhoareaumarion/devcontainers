@@ -7,8 +7,8 @@
     }
   },
   "containerEnv": {
-    "PYTHON_PACKAGES": "",                                              // comma-separated
-    "ANSIBLE_COLLECTIONS": ""                                           // comma-separated
+    "PYTHON_PACKAGES": "${templateOption:additionalPythonPackages}",                                              // comma-separated
+    "ANSIBLE_COLLECTIONS": "${templateOption:additionnalAnsibleCollections}"     
   },
   "customizations": {
     "vscode": {

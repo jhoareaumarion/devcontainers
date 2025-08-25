@@ -23,6 +23,16 @@
                 "3.9-bullseye"
             ],
             "default": "3.12-bullseye"
+        },
+        "additionalPythonPackages":{
+            "type": "string",
+            "description": "A comma-separated list of python packages you want to include in the devcontainer",
+            "default": ""
+        },
+        "additionnalAnsibleCollections":{
+            "type": "string",
+            "description": "A comma-separated list of ansible collections you want to include in the devcontainer",
+            "default": ""
         }
     },
     "platforms": ["Python"],
