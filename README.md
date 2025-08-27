@@ -19,7 +19,7 @@ The following documentation will also show how to use the `devcontainer` CLI to 
 | `ansible`                   | Pre-configured with Ansible and its dependencies.                         |
 | `kubectl`                   | Pre-configured with `kubectl` for Kubernetes development.                 |
 | `tofu`                      | Pre-configured with OpenTofu (Terraform) for infrastructure as code.       |
-| `ansible-kubernetes-tofu`  | Combines Ansible, Kubernetes tools (`kubectl`), and OpenTofu (Terraform). |
+| `ansible-bitwarden-kubernetes-tofu`  | Combines Ansible, Bitwarden CLI, Kubernetes tools (`kubectl`), and OpenTofu (Terraform). |
 
 ## 🛠 Using a Template
 
@@ -38,7 +38,7 @@ devcontainer templates apply \
 | `ansible`                   | ansible                   | See [README.md](src/ansible/README.md)
 | `kubectl`                   | kubectl                   | N/A
 | `tofu`                      | tofu                      | N/A
-| `ansible-kubernetes-tofu`   | ansible-kubernetes-tofu   | See [README.md](src/ansible-kubernetes-tofu/README.md)
+| `ansible-bitwarden-kubernetes-tofu`   | ansible-bitwarden-kubernetes-tofu   | See [README.md](src/ansible-bitwarden-kubernetes-tofu/README.md)
 
 ### Examples of devcontainer commands
 
@@ -54,11 +54,11 @@ devcontainer templates apply \
 --workspace-folder ~/Project \
 --template-id ghcr.io/jhoareaumarion/devcontainers/ansible:latest
 ```
-#### Using the `ansible-kubernetes-tofu devcontainer template` in the project at ~/Project with the Python packages `requests`, `pytest`
+#### Using the `ansible-bitwarden-kubernetes-tofu devcontainer template` in the project at ~/Project with the Python packages `requests`, `pytest`
 ``` bash
 devcontainer templates apply \
 --workspace-folder ~/Project \
---template-id ghcr.io/jhoareaumarion/devcontainers/ansible-kubernetes-tofu:latest
+--template-id ghcr.io/jhoareaumarion/devcontainers/ansible-bitwarden-kubernetes-tofu:latest
 --template-args '{ "additionalPythonPackages":"requests,pytest" }'
 ```
 #### Using the `ansible devcontainer template` in the project at ~/Project with the Python packages `requests`, `pytest` and the Ansible Collection `community.docker`
