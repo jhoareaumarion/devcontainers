@@ -1,5 +1,5 @@
 {
-    "id": "ansible-bitwarde,-kubernetes-tofu",
+    "id": "ansible-bitwarden-kubernetes-tofu",
     "version": "1.0.0",
     "name": "Ansible + Bitwarden CLI + Kubernetes + OpenTofu",
     "description": "Develop applications using Ansible, Bitwarden CLI, Kubernetes and OpenTofu",
