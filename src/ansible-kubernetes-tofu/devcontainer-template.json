@@ -1,6 +1,6 @@
 {
     "id": "ansible-kubernetes-tofu",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "Ansible + Kubernetes + OpenTofu",
     "description": "Develop applications using Ansible, Kubernetes and OpenTofu",
     "documentationURL": "https://github.com/jhoareaumarion/devcontainers/blob/main/src/ansible-kubernetes-tofu/README.md",
