@@ -7,9 +7,10 @@ Develop applications using Ansible, Kubernetes and OpenTofu
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| imageVariant | Python version (use -bookworm, or -bullseye variants on local arm64/Apple Silicon): | string | 3.12-bullseye |
+| imageVariant | Python version (use -bookworm, or -bullseye variants on local arm64/Apple Silicon): | string | 3.12-bookworm |
 | additionalPythonPackages | A comma-separated list of python packages you want to include in the devcontainer. Example: `requests,pytest,flask` | string | - |
 | additionnalAnsibleCollections | A comma-separated list of ansible collections you want to include in the devcontainer. Example: `community.docker,ansible.posix,kubernetes.core` | string | - |
+| additionnalSnapPackages | A comma-separated list of ansible collections you want to include in the devcontainer. Example: `hello-world` | string | - |
 
 
 
