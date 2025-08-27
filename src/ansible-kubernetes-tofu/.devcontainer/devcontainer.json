@@ -7,7 +7,7 @@
   "containerEnv": {
     "PYTHON_PACKAGES": "${templateOption:additionalPythonPackages}",                                              // comma-separated
     "ANSIBLE_COLLECTIONS": "${templateOption:additionnalAnsibleCollections}",   
-    "SNAP_PACKAGES": "${templateOption:additionalPythonPackages}"                                            // comma-separated
+    "SNAP_PACKAGES": "${templateOption:additionalSnapPackages}"                                            // comma-separated
   },
   "customizations": {
     "vscode": {
