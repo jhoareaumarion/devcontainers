@@ -15,6 +15,12 @@ if [ ! -z "$ANSIBLE_COLLECTIONS" ]; then
     ansible-galaxy collection install -r /tmp/requirements.yml
 fi
 
+if [ ! -z "$SNAP_PACKAGES" ]; then
+    echo "Installing snap packages into the devcontainer.."
+    snap install $(echo $SNAP_PACKAGES | tr ',' ' ')
+fi
+
 # Cleanup environment variables
 unset PYTHON_PACKAGES
 unset ANSIBLE_COLLECTIONS
+unset SNAP_PACKAGES

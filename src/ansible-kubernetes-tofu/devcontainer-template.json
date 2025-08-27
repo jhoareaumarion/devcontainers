@@ -22,7 +22,7 @@
                 "3.10-bullseye",
                 "3.9-bullseye"
             ],
-            "default": "3.12-bullseye"
+            "default": "3.12-bookworm"
         },
         "additionalPythonPackages":{
             "type": "string",
@@ -32,6 +32,11 @@
         "additionnalAnsibleCollections":{
             "type": "string",
             "description": "A comma-separated list of ansible collections you want to include in the devcontainer. Example: `community.docker,ansible.posix,kubernetes.core`",
+            "default": ""
+        },
+        "additionnalSnapPackages":{
+            "type": "string",
+            "description": "A comma-separated list of ansible collections you want to include in the devcontainer. Example: `hello-world`",
             "default": ""
         }
     },
