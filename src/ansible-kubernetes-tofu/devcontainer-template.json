@@ -1,6 +1,6 @@
 {
     "id": "ansible-kubernetes-tofu",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "Ansible + Kubernetes + OpenTofu",
     "description": "Develop applications using Ansible, Kubernetes and OpenTofu",
     "documentationURL": "https://github.com/jhoareaumarion/devcontainers/blob/main/src/ansible-kubernetes-tofu/README.md",
@@ -22,7 +22,7 @@
                 "3.10-bullseye",
                 "3.9-bullseye"
             ],
-            "default": "3.12-bullseye"
+            "default": "3.12-bookworm"
         },
         "additionalPythonPackages":{
             "type": "string",
@@ -32,6 +32,11 @@
         "additionnalAnsibleCollections":{
             "type": "string",
             "description": "A comma-separated list of ansible collections you want to include in the devcontainer. Example: `community.docker,ansible.posix,kubernetes.core`",
+            "default": ""
+        },
+        "additionnalSnapPackages":{
+            "type": "string",
+            "description": "A comma-separated list of ansible collections you want to include in the devcontainer. Example: `hello-world`",
             "default": ""
         }
     },

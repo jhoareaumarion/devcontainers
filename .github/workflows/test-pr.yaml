@@ -12,8 +12,10 @@ jobs:
         id: filter
         with:
           filters: |
-            color: ./**/color/**
-            hello: ./**/hello/**
+            ansible: ./**/ansible/**
+            tofu: ./**/tofu/**
+            kubectl: ./**/kubectl/**
+            ansible-kubernetes-tofu: ./**/ansible-kubernetes-tofu/**
 
   test:
     needs: [detect-changes]
