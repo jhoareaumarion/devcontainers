@@ -1,5 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/python:1-${templateOption:imageVariant}
-#${templateOption:imageVariant}
+FROM mcr.microsoft.com/devcontainers/python:1-3.13-bookworm
 
 LABEL org.opencontainers.image.source="https://github.com/jhoareaumarion/devcontainers"
 LABEL org.opencontainers.image.description="Ansible DevContainer"
