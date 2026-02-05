@@ -1,5 +1,5 @@
 {
-  "name": "Kubectl",
+  "name": "Kubernetes",
   "build":{
     "dockerfile": "Dockerfile",
     "context": "."
