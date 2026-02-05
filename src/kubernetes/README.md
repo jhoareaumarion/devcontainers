@@ -1,5 +1,5 @@
 
-# kubectl (kubectl)
+# kubernetes (kubernetes)
 
 Develop applications using kubectl
 
@@ -13,4 +13,4 @@ Develop applications using kubectl
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/jhoareaumarion/devcontainers/blob/main/src/kubectl/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-template.json](https://github.com/jhoareaumarion/devcontainers/blob/main/src/kubernetes/devcontainer-template.json).  Add additional notes to a `NOTES.md`._
