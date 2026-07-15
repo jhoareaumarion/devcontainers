@@ -1,21 +1,28 @@
 {
   "name": "Kubernetes",
-  "build":{
+  "build": {
     "dockerfile": "Dockerfile",
     "context": "."
+  },
+  "remoteUser": "coder",
+  "containerUser": "coder",
+  "workspaceFolder": "/home/coder/workspace/homelab-kubernetes-apps",
+  
+  "containerEnv": {
+    "GPG_TTY": "/dev/tty"
   },
   "customizations": {
     "vscode": {
       "extensions": [
+        "opentofu.vscode-opentofu",
         "redhat.vscode-yaml",
         "ms-kubernetes-tools.vscode-kubernetes-tools",
-      ]
+        "redhat.ansible"
+      ],
+      "settings": {
+        "git.enableCommitSigning": true,
+        "git.commitSigningOffloading": true
+      }
     }
-  },
-  "postCreateCommand": "",
-  "remoteUser": "root",
-  "features": {},
-  "forwardPorts": [],
-  "mounts": [],
-  "workspaceFolder": "/workspace"
+  }
 }
