@@ -1,28 +1,14 @@
 {
-  "name": "Kubernetes",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": "."
-  },
-  "remoteUser": "coder",
-  "containerUser": "coder",
-  "workspaceFolder": "/home/coder/workspace/homelab-kubernetes-apps",
-  
-  "containerEnv": {
-    "GPG_TTY": "/dev/tty"
+  "name": "Kubernetes Dev Container",
+  "image": "ghcr.io/jhoareaumarion/devcontainers/kubernetes:${templateOption:imageTag}",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:1": {}
   },
   "customizations": {
     "vscode": {
       "extensions": [
-        "opentofu.vscode-opentofu",
-        "redhat.vscode-yaml",
-        "ms-kubernetes-tools.vscode-kubernetes-tools",
-        "redhat.ansible"
-      ],
-      "settings": {
-        "git.enableCommitSigning": true,
-        "git.commitSigningOffloading": true
-      }
+        "ms-kubernetes-tools.vscode-kubernetes-tools"
+      ]
     }
   }
 }

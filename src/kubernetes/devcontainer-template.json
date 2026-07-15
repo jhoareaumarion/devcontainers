@@ -9,20 +9,9 @@
     "options": {
         "imageVariant": {
             "type": "string",
-            "description": "Python version (use -bookworm, or -bullseye variants on local arm64/Apple Silicon):",
-            "proposals": [
-                "3-bookworm",
-                "3.12-bookworm",
-                "3.11-bookworm",
-                "3.10-bookworm",
-                "3.9-bookworm",
-                "3-bullseye",
-                "3.12-bullseye",
-                "3.11-bullseye",
-                "3.10-bullseye",
-                "3.9-bullseye"
-            ],
-            "default": "3.12-bullseye"
+            "description": "The tag version of the pre-built image to use",
+            "proposals": ["1.0.0","1.0.1","latest"],
+            "default": "latest"
         }
     },
     "platforms": ["Python"],
