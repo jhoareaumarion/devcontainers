@@ -1,0 +1,56 @@
+name: "Build and Push Kubernetes DevContainer"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/kubernetes/**'
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: write # Required to create Git tags on the repo
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Required to calculate SemVer relative to past tags
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bump version and push tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          default_bump: patch
+          tag_prefix: "kubernetes-" # Creates Git tag like: kubernetes-1.0.1
+
+      - name: Parse Clean Image Tags
+        id: tags
+        run: |
+          VERSION="${{ steps.tag_version.outputs.new_version }}"
+          if [ -z "$VERSION" ]; then
+            # Fallback if manually triggered without a new commit to bump
+            echo "tags=latest" >> $GITHUB_OUTPUT
+          else
+            # Outputs 'latest,1.0.1' without the prefix
+            echo "tags=latest,${VERSION}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build and Push to GHCR
+        uses: devcontainers/ci@v0.3
+        with:
+          imageName: ghcr.io/${{ github.repository }}/kubernetes
+          imageTag: ${{ steps.tags.outputs.tags }}
+          subFolder: src/kubernetes
+          push: always
