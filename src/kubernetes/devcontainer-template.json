@@ -1,6 +1,6 @@
 {
     "id": "kubernetes",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "name": "kubernetes",
     "description": "Develop applications using kubectl",
     "documentationURL": "https://github.com/jhoareaumarion/devcontainers/blob/main/src/kubectl/README.md",
@@ -10,7 +10,7 @@
         "imageVariant": {
             "type": "string",
             "description": "The tag version of the pre-built image to use",
-            "proposals": ["1.0.0","1.0.1","latest"],
+            "proposals": ["1.0.1","1.0.2","latest"],
             "default": "latest"
         }
     },
