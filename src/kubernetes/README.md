@@ -7,7 +7,7 @@ Develop applications using kubectl
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| imageVariant | Python version (use -bookworm, or -bullseye variants on local arm64/Apple Silicon): | string | 3.12-bullseye |
+| imageVariant | The tag version of the pre-built image to use | string | latest |
 
 
 
